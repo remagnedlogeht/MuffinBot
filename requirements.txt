@@ -1,0 +1,6 @@
+discord.py
+psutil
+praw
+aiohttp
+brawlstats
+hurry.filesize
