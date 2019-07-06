@@ -10,7 +10,9 @@ reddit = praw.Reddit(client_id=os.getenv("ID"),
                      user_agent=os.getenv("USER_AGENT"))
 
 api_key = os.getenv("API")
-
+API = os.getenv("iTOKEN")
+tID = os.getenv("tID")
+tKEY = os.getenv("tKEY")
 class Search(commands.Cog):
     """Are you lazy to search it? Don't worry!
 We have some search commands"""
@@ -27,7 +29,7 @@ We have some search commands"""
             search = random.choice(default)
         msg = await ctx.send("<a:Loading:465439021514883072> **Loading...**")
         async with aiohttp.ClientSession() as cs:
-            async with cs.get(f'https://api.imgur.com/3/gallery/search/time/all/0?q={search}', headers={'Authorization': 'Client-ID API'}) as r:
+            async with cs.get(f'https://api.imgur.com/3/gallery/search/time/all/0?q={search}', headers={'Authorization': f'Client-ID {API}'}) as r:
                 res = await r.json()
                 try:
                     if res['success'] is False:
@@ -148,7 +150,7 @@ We have some search commands"""
             return await ctx.send(f"**Use `{ctx.prefix}tenor <search>!`**")
         msg = await ctx.send("<a:Loading:465439021514883072> **Loading...**")
         async with aiohttp.ClientSession() as cs:
-            async with cs.get(f'https://api.tenor.com/v1/search?q={search}&key=KEY&limit=10&anon_id=ID') as r:
+            async with cs.get(f'https://api.tenor.com/v1/search?q={search}&key={tKEY}&limit=10&anon_id={tID}') as r:
                 res = await r.json()
                 try:
                     url = res['weburl']
