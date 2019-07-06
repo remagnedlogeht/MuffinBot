@@ -10,6 +10,7 @@ from discord import Webhook, RequestsWebhookAdapter
 import requests
 from PIL import Image
 import PIL.ImageOps
+import os
 
 API = os.getenv("dmTOKEN")
 class Images(commands.Cog):
