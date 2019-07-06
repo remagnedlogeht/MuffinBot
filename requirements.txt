@@ -5,3 +5,11 @@ aiohttp
 brawlstats
 hurry.filesize
 wordfilter
+cached_property
+ffmpeg-python
+opuslib
+psutil
+youtube_dl
+asyncio
+Pymoe
+pip
