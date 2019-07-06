@@ -4,3 +4,4 @@ praw
 aiohttp
 brawlstats
 hurry.filesize
+wordfilter
