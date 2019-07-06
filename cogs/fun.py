@@ -7,6 +7,7 @@ import io
 import aiohttp
 from discord import Webhook, RequestsWebhookAdapter
 import requests
+import os
 
 
 APIi = os.getenv("iTOKEN")
