@@ -4,6 +4,7 @@ import random
 import asyncio
 import aiohttp
 import praw
+import os
 
 APIi = os.getenv("iTOKEN")
 
