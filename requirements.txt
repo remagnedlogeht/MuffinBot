@@ -5,4 +5,3 @@ aiohttp
 brawlstats
 hurry.filesize
 wordfilter
-PIL
