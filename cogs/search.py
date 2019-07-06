@@ -3,12 +3,13 @@ from discord.ext import commands
 import random
 import aiohttp
 import praw
+import os
 
-reddit = praw.Reddit(client_id='ID',
-                     client_secret='SECRET',
-                     user_agent='USER_AGENT')
+reddit = praw.Reddit(client_id=os.getenv("ID"),
+                     client_secret=os.getenv("SECRET"),
+                     user_agent=os.getenv("USER_AGENT"))
 
-api_key = "API"
+api_key = os.getenv("API")
 
 class Search(commands.Cog):
     """Are you lazy to search it? Don't worry!
