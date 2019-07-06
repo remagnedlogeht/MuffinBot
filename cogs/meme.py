@@ -3,6 +3,7 @@ from discord.ext import commands
 import aiohttp
 import io
 import typing
+import os
 
 API = {
     'Authorization': os.getenv("dmTOKEN")
